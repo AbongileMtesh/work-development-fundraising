@@ -1,0 +1,134 @@
+ways to give
+
+<!-- Payment Methods Section -->
+<div class="payment-methods">
+  <h2><span>Payment</span> methods</h2>
+  <div class="payment-buttons">
+    <button>Payroll</button>
+    <button>Stop order</button>
+    <button>Myriad USA</button>
+  </div>
+</div>
+
+<!-- Ways to Give Section -->
+<div class="ways-to-give">
+  <h2>Ways to <span>give</span></h2>
+
+  <div class="giving-item">
+    <img src="https://img.icons8.com/ios-filled/50/FA5C00/online-payment.png" alt="Online donations" />
+    <div>
+      <h4>Online donations</h4>
+      <p>
+        The UJ online donation platform, powered by Virtual Card Services, is a secure and convenient way to support the university.
+        With this platform, you can make donations using your credit card securely, anytime, anywhere. You can choose to donate any
+        amount you wish or select from the stipulated amounts on the system.
+      </p>
+    </div>
+  </div>
+
+  <div class="giving-item">
+    <img src="https://img.icons8.com/ios-filled/50/FA5C00/handshake.png" alt="In-kind donations" />
+    <div>
+      <h4>In-kind donations</h4>
+      <p>
+        The UJ University also receives in-kind donations which can be in the form of a good or service through mutually beneficial
+        arrangements with the donor.
+      </p>
+    </div>
+  </div>
+
+  <div class="giving-item">
+    <img src="https://img.icons8.com/ios-filled/50/FA5C00/money-box.png" alt="Endowments" />
+    <div>
+      <h4>Endowments</h4>
+      <p>
+        Large-scale private support, particularly when it comes in the form of an endowment, allows the university to make long-term
+        plans in terms of its students, staff and infrastructure.
+      </p>
+    </div>
+  </div>
+</div>
+
+CSS:
+
+.payment-methods {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.payment-methods h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.payment-methods h2 span {
+  color: #E67121;
+}
+
+.payment-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.payment-buttons button {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.payment-buttons button:hover {
+  background-color: #333;
+}
+
+/* Ways to Give */
+.ways-to-give {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ways-to-give h2 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.ways-to-give h2 span {
+  color: #E67121;
+}
+
+.giving-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.giving-item img {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.giving-item h4 {
+  color: #E67121;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.giving-item p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}

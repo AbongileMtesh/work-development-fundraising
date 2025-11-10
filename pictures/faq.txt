@@ -1,0 +1,60 @@
+<section id="faq" style="background-color: #FAF5EC; padding: 50px 20px; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; color: #E67121; margin-bottom: 40px;">Frequently Asked Questions</h2>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <h3 class="faq-question">Is there a free trial available?</h3>
+      <p class="faq-answer">Yes, you can try us for free for 30 days. We’ll provide you with a free onboarding call to get you up and running.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Can I change my plan later?</h3>
+      <p class="faq-answer">Of course! Our pricing scales with your needs. You can chat to our team to adjust your plan at any time.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">What is your cancellation policy?</h3>
+      <p class="faq-answer">You can cancel your plan at any time and we’ll refund the difference already paid.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">How does billing work?</h3>
+      <p class="faq-answer">Plans are per workspace. You can upgrade one workspace, and still have any number of free ones.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">How does support work?</h3>
+      <p class="faq-answer">Our team is ready to help — reach out via our contact page and we’ll respond as soon as possible.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .faq-item {
+    background: white;
+    border-left: 5px solid #E67121;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+  }
+
+  .faq-question {
+    color: #E67121;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .faq-answer {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+</style>

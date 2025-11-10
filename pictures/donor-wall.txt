@@ -1,0 +1,139 @@
+<section id="donor-wall">
+  <!-- Logo Slider -->
+  <div class="logo-slider">
+    <div class="logo-track">
+      <img src="logo1.png" alt="Standard Bank" />
+      <img src="logo2.png" alt="Adidas" />
+      <img src="logo3.png" alt="Checkers" />
+      <img src="logo4.png" alt="MNS Attorneys" />
+      <img src="logo5.png" alt="Fundi" />
+      <!-- Duplicate logos for seamless looping -->
+      <img src="logo1.png" alt="Standard Bank" />
+      <img src="logo2.png" alt="Adidas" />
+      <img src="logo3.png" alt="Checkers" />
+      <img src="logo4.png" alt="MNS Attorneys" />
+      <img src="logo5.png" alt="Fundi" />
+    </div>
+  </div>
+
+  <!-- Donor Cards Grid -->
+  <div class="donor-grid">
+    <div class="donor-card">
+      <img src="hand-icon.svg" alt="icon" />
+      <h3>Tshepiso Mabe</h3>
+      <p><strong>Faculty:</strong> Health Sciences</p>
+      <p><strong>Cause:</strong> Student Bursaries</p>
+      <p><strong>Since:</strong> 2021</p>
+    </div>
+    <div class="donor-card">
+      <img src="hand-icon.svg" alt="icon" />
+      <h3>Jacob Senoamadi</h3>
+      <p><strong>Faculty:</strong> Humanities</p>
+      <p><strong>Cause:</strong> Entrepreneurship Hub</p>
+      <p><strong>Since:</strong> 2019</p>
+    </div>
+    <!-- Add more donors as needed -->
+  </div>
+
+  <!-- Pagination (Optional Static Preview) -->
+  <div class="pagination">
+    <span class="active">1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>...</span>
+  </div>
+</section>
+
+CSS:
+
+#donor-wall {
+  background-color: #fff5ec;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* Logo slider */
+.logo-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(250px * 10);
+  animation: scroll 25s linear infinite;
+}
+
+.logo-track img {
+  width: 150px;
+  margin: 0 30px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Donor cards */
+.donor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.donor-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.donor-card:hover {
+  transform: translateY(-5px);
+}
+
+.donor-card img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.donor-card h3 {
+  margin: 0;
+  color: #333;
+}
+
+.donor-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 30px;
+}
+
+.pagination span {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 4px;
+  background: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #E67121;
+  color: white;
+}

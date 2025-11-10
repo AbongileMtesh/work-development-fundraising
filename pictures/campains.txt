@@ -1,0 +1,165 @@
+<section id="media-stories">
+  <div class="media-grid">
+    <!-- Intuthuko Digital Magazine -->
+    <div class="media-card">
+      <img src="intuthuko-cover.jpg" alt="Intuthuko Cover" class="media-img" />
+      <div class="media-content">
+        <h3>Intuthuko Digital Magazine</h3>
+        <p>Thought leadership, alumn⁵ voices, and donor stories — all in one place.</p>
+        <a href="#" class="media-button">Read the Latest Issue</a>
+      </div>
+    </div>
+
+    <!-- Donor Spotlights -->
+    <div class="media-card">
+      <img src="donor.jpg" alt="Donor Spotlight" class="media-img" />
+      <div class="media-content">
+        <h3>Donor Spotlights</h3>
+        <p>Watch how partnerships with brands like Lucky Star and Google are opening doors for students.</p>
+        <a href="#" class="media-link red">Watch the Videos</a>
+      </div>
+    </div>
+
+    <!-- Student Voices -->
+    <div class="media-card">
+      <div class="media-content only">
+        <h3>Student Voices</h3>
+        <ul class="media-list">
+          <li>❤️ Mentorship Meals.</li>
+          <li>✨ Moments of hope.</li>
+          <li>📊 These are the real wins behind the numbers</li>
+        </ul>
+        <a href="#" class="media-link orange">Explore Student Stories</a>
+      </div>
+    </div>
+
+    <!-- Social Highlights -->
+    <div class="media-card">
+      <div class="media-content only">
+        <h3>Social Highlights</h3>
+        <div class="social-post">
+          <img src="social.jpg" alt="Social Post" class="social-img" />
+          <p class="social-caption">@UJGiveBack - follow the campaign. Give movement. See what’s trending at @UJGiveBack.</p>
+        </div>
+        <a href="#" class="media-link red">Join the Conversation</a>
+      </div>
+    </div>
+
+    <!-- Got a story to share -->
+    <div class="media-card full">
+      <div class="media-content only">
+        <h3>Got a story to share?</h3>
+        <p>UJ’s journey is written by many voices — including yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+//CSSS
+
+#media-stories {
+  background-color: #fefaf5;
+  padding: 60px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.media-card {
+  background-color: #fff4e6;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.media-card.full {
+  grid-column: span 2;
+}
+
+.media-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.media-content {
+  padding-top: 20px;
+}
+
+.media-content.only {
+  padding-top: 0;
+}
+
+.media-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.media-content p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.media-list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.media-button {
+  background-color: #f96300;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.media-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.media-link.red {
+  color: #d64200;
+}
+
+.media-link.orange {
+  color: #f96300;
+}
+
+.social-post {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.social-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.social-caption {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}

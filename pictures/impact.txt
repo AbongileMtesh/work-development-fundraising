@@ -1,0 +1,153 @@
+<!-- SECTION: Student Stories and Impact Stats -->
+<section id="student-stories" style="background-color: #fff; padding: 60px 20px; text-align: center;">
+  <div class="container">
+    <h2 class="section-heading" style="font-size: 2.2em; color: #222; margin-bottom: 40px;">A Thousand Stories — And Counting</h2>
+
+    <!-- Student Cards Grid -->
+    <div class="student-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      <!-- Card 1 -->
+      <div class="student-card" style="width: 220px; text-align: center;">
+        <img src="images/student1.jpg" alt="Thabo" style="width: 100%; border-radius: 12px;">
+        <div style="margin-top: 10px; font-weight: bold; font-size: 1.1em;">Thabo ’23</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="student-card" style="width: 220px; text-align: center;">
+        <img src="images/student2.jpg" alt="Alsha" style="width: 100%; border-radius: 12px;">
+        <div style="margin-top: 10px; font-weight: bold; font-size: 1.1em;">Alsha ’22</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="student-card" style="width: 220px; text-align: center;">
+        <img src="images/student3.jpg" alt="Nomvula" style="width: 100%; border-radius: 12px;">
+        <div style="margin-top: 10px; font-weight: bold; font-size: 1.1em;">Nomvula ’24</div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="student-card" style="width: 220px; text-align: center;">
+        <img src="images/student4.jpg" alt="David" style="width: 100%; border-radius: 12px;">
+        <div style="margin-top: 10px; font-weight: bold; font-size: 1.1em;">David ’21</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Impact Stats -->
+<section id="impact-stats" class="stats-section">
+  <div class="container">
+    <h2 class="section-heading">What Your Support Makes Possible</h2>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-number" data-target="4500">0</div>
+        <div class="stat-label">meals served monthly</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="5000">0</div>
+        <div class="stat-label">students registered<br>with donor support</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="6300000">R0</div>
+        <div class="stat-label">raised via<br>Giving Day</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" data-target="1300">0</div>
+        <div class="stat-label">active mentors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  .stats-section {
+    background-color: #FAF5EC;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .section-heading {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    color: #222;
+    font-weight: 600;
+  }
+
+  .stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .stat-box {
+    flex: 1 1 180px;
+    max-width: 220px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .stat-number {
+    font-size: 2.4em;
+    color: #F47C20;
+    font-weight: 700;
+  }
+
+  .stat-label {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.4;
+  }
+</style>
+
+<!-- Script: Counter Animation -->
+<script>
+  function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const isCurrency = counter.textContent.startsWith('R');
+      let current = 0;
+      const speed = 60;
+
+      const update = () => {
+        const increment = target / speed;
+        current += increment;
+
+        if (current < target) {
+          counter.textContent = isCurrency
+            ? 'R' + Math.floor(current).toLocaleString()
+            : Math.floor(current).toLocaleString();
+          requestAnimationFrame(update);
+        } else {
+          counter.textContent = isCurrency
+            ? 'R' + target.toLocaleString()
+            : target.toLocaleString();
+        }
+      };
+
+      update();
+    });
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+
+  let hasAnimated = false;
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('#impact-stats');
+    if (!hasAnimated && isInViewport(section)) {
+      animateCounters();
+      hasAnimated = true;
+    }
+  });
+</script>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently-Asked-Questions</title>
+     <link rel="stylesheet" href="Home.css">
+     <link rel="stylesheet" href="https://use.typekit.net/hcj4fmf.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-top-bar">
+        <div class="container">
+            <nav class="top-nav">
+                <ul>
+                  <li><a href="https://news.uj.ac.za/">News</a></li>
+                  <li><a href="https://online.flippingbook.com/view/879155134/">Intuthuko</a></li>
+                  <li><a href="Home.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="tagline">Our Future. Reimagined.</div>
+        </div>
+    </div>
+    <!--For mobile-->
+    <div class="header-main-content">
+        <div class="container">
+          <button class="hamburger-menu" aria-label="Toggle navigation">
+<i class="fas fa-bars"></i>
+</button><!--Mobile-->
+
+            <div class="logo">
+                <a href="Home.html">
+                   
+                    <span class="uj-slogan">
+                       <img src="pictures/UJ_Stamp_B.jpg"  alt="University of Johannesburg Logo">
+                    </span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                     <li><a href="Home.html">Home</a></li>
+                      <li><a href="aboutUs.html">About Us</a></li>
+                      <li><a href="Staff.html">Staff</a></li>
+                      <li><a href="projects.html">Campaigns </a></li>
+                     <li><a href="waytogive.html"> How to give </a>
+                    <li><a href="benefits.html">Benefits of Giving</a></li>
+                    <!-- <li><a href="about.html">Donor wall</a></li> -->
+                   
+                    <li><div class="project-links">
+                      <a href="https://uj.devman.co.za/devman/online/giving/" style="color:#fff;background-color: #f26522;margin-top: -10px;">DONATE</a>
+                    </li> 
+                </ul>
+            </nav>
+        </div> 
+    </div>
+    <!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+<div class="mobile-menu-header">
+<img src="pictures/uj logo long.gif" alt="UJ Logo" class="mobile-logo">
+<button class="close-menu-btn" id="closeMenuBtn">&times;</button>
+</div>
+<nav class="mobile-nav">
+<ul>
+  <li><a href="Home.html">Home</a></li>
+  <li><a href="aboutUs.html"> About Us </a>
+  <li><a href="Staff.html">Staff</a></li>
+  <li><a href="projects.html">Campaigns</a></li>
+  <li><a href="waytogive.html">How to give</a></li>
+  <li><a href="benefits.html">Benefits of giving</a></li>
+   <!-- <li><a href="about.html">Donor wall</a></li> -->
+  <li><a href="Home.html#contact">Contact Us</a></li>
+  <li><a href="https://uj.devman.co.za/devman/online/giving/" style="color: #f26522;">DONATE</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section id="faq" style="background-color: #FAF5EC; padding: 50px 20px; font-family: Arial, sans-serif; height:800px">
+  <h2 style="text-align: center; color: #f26522; margin-bottom: 40px;">Frequently Asked Questions</h2>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <h3 class="faq-question">How can i make a donation to the university or discuss a large gift or partnership?</h3>
+      <p class="faq-answer">Contact Mrs Cagney Govendor on cagneyg@uj.ac.za</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Can I donate to different initiatives/ causes?</h3>
+      <p class="faq-answer">Of course! Explore our campaign tab to see the different initiatives that are there.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Is my donation tax deductible?</h3>
+      <p class="faq-answer">Yes, you would have gotten a Section 18A, which  allows the donor to claim a tax deduction for their contribution.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Can i remain annonymous as a donor?</h3>
+      <p class="faq-answer">Yes. When you are about to conclude your payment, you can select weather you want to be annonymous or not.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">Does the office accept non-monetary donations?</h3>
+      <p class="faq-answer">Yes, that would be in-kind donations you can click <a href="waytogive.html">here</a> to know more about them</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-question">What is the DFO office?</h3>
+      <p class="faq-answer">Explore our About us tab</p>
+    </div>
+
+    
+  </div>
+</section>
+
+<style>
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .faq-item {
+    background: white;
+    border-left: 5px solid #f26522;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+  }
+
+  .faq-question {
+    color: #f26522;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .faq-answer {
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+</style>
+   
+ <script src="Home.js"></script>
+</body>
+</html>
