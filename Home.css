@@ -878,9 +878,15 @@ body {
 }
 
 .staff-card img {
-  width: 50%;
-  height: auto;
-  border-radius: 70px;
+  /*width: 220px;         /* fixed size so all images match 
+  height: 220px;
+  object-fit: cover;    /* zooms & crops image to fill the circle 
+  border-radius: 50%;   /* perfect circle 
+  margin-bottom: 15px;*/
+  width: 230px;
+  height: 300px;
+  object-fit: cover;     
+  border-radius: 20px;
   margin-bottom: 15px;
 }
 
@@ -897,7 +903,7 @@ body {
 .staff-card .icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 15pPXPXx;
   font-size: 1.5rem;
   color: var(--uj-orange);
 }
@@ -1292,6 +1298,14 @@ body {
 .media-content.only {
   padding-top: 0;
 }
+.media-stack {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 30px; /* space between cards */
+  max-width: 800px; /* optional, control width */
+  margin: 0 auto; /* center on page */
+}
+
 
 .media-content h3 {
   font-size: 20px;
@@ -2480,7 +2494,6 @@ body {
 
 
 /*Specific Detail Projects*/
-
 .foodbank-hero {
   display: flex;
   align-items: center;
@@ -2618,323 +2631,294 @@ body {
   background: #f2f2f2;
 }
 
-/* Why the Food Bank Matters */
-.foodbank-matters {
+
+.containertt {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #000;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e63946;
+  margin: 10px auto;
+}
+
+/* Why Matters Section */
+.why-matters-section {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+}
+
+.content-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 60px 10%;
-  gap: 40px;
-  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 4rem;
 }
 
-.stat-card {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  margin-top: 20px;
-  max-width: 550px;
-
+.text-content {
+  flex: 1;
 }
 
-.stat-card h3 {
-  color: var(--uj-orange);
-  font-size: 2rem;
-  margin-bottom: 10px;
+.text-content .quote {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #000;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #e63946;
+  padding-left: 1rem;
 }
 
-.matters-image img {
-  max-width: 450px;
-  max-height: 450px;
-  border-radius: 12px;
+.text-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.image-container {
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.styled-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Additional Content */
+.additional-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.additional-image {
+  flex: 1;
+}
+
+.additional-text {
+  flex: 1;
+}
+
+.additional-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 /* Impact Section */
-.foodbank-impact {
-  padding: 60px 10%;
-  text-align: center;
+.impact-section {
+  padding: 5rem 0;
+  background-color: #ffffff;
 }
 
-.foodbank-impact .highlight {
-  color: var(--uj-orange);
-  font-size: 1.3rem;
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
 
-.progress-bar {
-  width: 100%;
-  background: #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 20px 0;
-  height: 16px;
+.impact-item {
+  background: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.progress {
-  width: 60%; /* adjust dynamically */
-  height: 100%;
-  background: var(--uj-orange);
+.impact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.donation-options {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 30px 0;
+.impact-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 1rem;
 }
 
-.donation-options button {
-  background: #fff;
-  border: 2px solid var(--uj-orange);
-  color: var(--uj-orange);
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+.impact-item p {
+  color: #555;
+  line-height: 1.7;
 }
 
-.donation-options button:hover {
-  background: var(--uj-orange);
-  color: #fff;
+/* Voices Section */
+.voices-section {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, #f0f4f8, #e2e8f0);
 }
 
-/* Responsive */
-@media(max-width: 768px) {
-  .foodbank-hero, .foodbank-matters {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .btn-primary{
-    font-size: 0.95rem;
-    padding: 12px 20px;
-    width: 90%;
-  }
-  /* Hide the image on mobile */
-  .matters-image {
-    display: none;
-  }
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
 
-  .foodbank-hero {
-    position: relative;
-    background: url("pictures/Image\ \(2\).jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
+.voice-item {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
 
-  /* Dark overlay */
-  .foodbank-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
+.quote-mark {
+  font-size: 4rem;
+  color: #e63946;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 0.3;
+  font-family: serif;
+}
 
-  /* Ensure text stays above overlay */
-  .foodbank-hero * {
-    position: relative;
-    z-index: 1;
+.testimonial {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.author {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.author strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  margin-bottom: 0.3rem;
+}
+
+.author span {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+
+/* Tablet - 1024px */
+@media (max-width: 1024px) {
+  .container {
+      max-width: 900px;
   }
-  .missing-hero {
-    position: relative;
-    background: url("pictures/Missing\ Middle.jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
+  
+  .section-title {
+      font-size: 2.2rem;
   }
-  .missing-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
+  
+  .content-wrapper, .additional-content {
+      gap: 2rem;
   }
-  .missing-hero * {
-    position: relative;
-    z-index: 1;
+  
+  .image-placeholder {
+      height: 300px;
   }
-  .alumni-hero {
-    position: relative;
-    background: url("pictures/universities\ -\ \ alimni\ fund\ 2.jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
+  
+  .impact-grid, .voices-grid {
+      gap: 2rem;
   }
-  .alumni-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .alumni-hero * {
-    position: relative;
-    z-index: 1;
-  }
-  .double-hero {
-    position: relative;
-    background: url("pictures/student-registrations.jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
-  .double-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .double-hero * {
-    position: relative;
-    z-index: 1;
-  }
-  .debt-hero {
-    position: relative;
-    background: url("pictures/student_debt_800_wht.jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
-  .debt-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .debt-hero * {
-    position: relative;
-    z-index: 1;
-  }
-  .alistar-hero {
-    position: relative;
-    background: url("pictures/AlumniAwards23.2.Alistair-Mokoena.jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
-  .alistar-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .alistar-hero * {
-    position: relative;
-    z-index: 1;
-  }
-  .mpedi-hero {
-    position: relative;
-    background: url("pictures/Image\ prof\ mpedi_LE_upscale_balanced_x4.jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
-  .mpedi-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .mpedi-hero * {
-    position: relative;
-    z-index: 1;
-  }
-  .choir-hero {
-    position: relative;
-    background: url("pictures/wholeChoir\ dark.webp") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
-  .choir-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .choir-hero * {
-    position: relative;
-    z-index: 1;
-  }
-  .mix-hero {
-    position: relative;
-    background: url("pictures/MIXEDR.png") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
-  .mix-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .mix-hero * {
-    position: relative;
-    z-index: 1;
-  }
-  .sth-hero {
-    position: relative;
-    background: url("pictures/kerzner.jpg") no-repeat center center/cover;
-    color: white; /* make sure text is visible */
-    text-align: center;
-  }
-  .sth-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-    filter: blur(2px); /* adjust blur level */
-    z-index: 0;
-  }
-  .sth-hero * {
-    position: relative;
-    z-index: 1;
+  
+  .impact-item, .voice-item {
+      padding: 2rem;
   }
 }
 
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .section-title {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+  }
+  
+  .content-wrapper, .additional-content {
+      flex-direction: column;
+  }
+  
+  .additional-content {
+      flex-direction: column-reverse;
+  }
+  
+  .image-placeholder {
+      height: 250px;
+  }
+  
+  .impact-grid, .voices-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+  }
+  
+  .why-matters-section, .impact-section, .voices-section {
+      padding: 4rem 0;
+  }
+  
+  .text-content .quote {
+      font-size: 1.3rem;
+  }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+  .container {
+      padding: 0 15px;
+  }
+  
+  .section-title {
+      font-size: 1.8rem;
+  }
+  
+  .text-content .quote {
+      font-size: 1.2rem;
+  }
+  
+  .image-placeholder {
+      height: 200px;
+      font-size: 1rem;
+  }
+  
+  .impact-item, .voice-item {
+      padding: 1.5rem;
+  }
+  
+  .quote-mark {
+      font-size: 3rem;
+      top: 5px;
+      left: 15px;
+  }
+  
+  .why-matters-section, .impact-section, .voices-section {
+      padding: 3rem 0;
+  }
+}
 
 /*testimonial page*/
 #stories-testimonials {
