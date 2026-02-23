@@ -143,7 +143,7 @@ body {
 }
 
 .logo img {
-    height: 50px; /* Adjust logo size */
+    height: 100px; /* Adjust logo size */
     margin-right: 10px;
     transition: transform 0.3s ease;
 }
