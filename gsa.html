@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduate School of Architecture</title>
+    <link rel="stylesheet" href="Home.css">
+     <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #fff;
+    }
+    
+    .section-container {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+    
+    /* Title */
+    .section-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    
+    /* Layout */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    /* LEFT SIDE */
+    .left img.main-image {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .left p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    /* Circle image (NOW AN IMAGE) */
+    .circle-image {
+        width: 140px;
+    margin: 30px auto 0 auto; /* THIS centers it */
+    display: block;
+    }
+    
+    /* RIGHT SIDE */
+    .right .intro {
+        font-style: italic;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .button {
+        display: inline-block;
+        background: #e6e600;
+        padding: 12px 20px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        margin: 15px 0;
+    }
+    
+    .right p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-151BM25LCJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-151BM25LCJ');
+</script>
+<body>
+
+  <header class="main-header">
+    <div class="header-top-bar">
+        <div class="container">
+            <nav class="top-nav">
+                <ul>
+                  <li><a href="https://news.uj.ac.za/">News</a></li>
+                  <li><a href="https://online.flippingbook.com/view/879155134/">Intuthuko</a></li>
+                  <li><a href="Home.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="tagline">Our Future. Reimagined.</div>
+        </div>
+    </div>
+    <!--For mobile-->
+    <div class="header-main-content">
+        <div class="container">
+          <button class="hamburger-menu" aria-label="Toggle navigation">
+<i class="fas fa-bars"></i>
+</button><!--Mobile-->
+
+            <div class="logo">
+                <a href="Home.html">
+                   
+                    <span class="uj-slogan">
+                       <img src="pictures/university-of-johannesburg-logo.png"  alt="University of Johannesburg Logo">
+                    </span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                     <li><a href="Home.html">Home</a></li>
+                      <li><a href="aboutUs.html">About Us</a></li>
+                      <li><a href="Staff.html">Staff</a></li>
+                      <li><a href="projects.html">Campaigns </a></li>
+                     <li><a href="waytogive.html"> How to give </a>
+                    <li><a href="benefits.html">Benefits of Giving</a></li>
+                    <!-- <li><a href="about.html">Donor wall</a></li> -->
+                   
+                    <li><div class="project-links">
+                      <a href="https://uj.devman.co.za/devman/online/giving/" style="color:#fff;background-color: #f26522;margin-top: -10px;">DONATE</a>
+                    </li> 
+                </ul>
+            </nav>
+        </div> 
+    </div>
+    <!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+<div class="mobile-menu-header">
+<img src="pictures/uj logo long.gif" alt="UJ Logo" class="mobile-logo">
+<button class="close-menu-btn" id="closeMenuBtn">&times;</button>
+</div>
+<nav class="mobile-nav">
+<ul>
+  <li><a href="Home.html">Home</a></li>
+  <li><a href="aboutUs.html"> About Us </a>
+  <li><a href="Staff.html">Staff</a></li>
+  <li><a href="projects.html">Campaigns</a></li>
+  <li><a href="waytogive.html">How to give</a></li>
+  <li><a href="benefits.html">Benefits of giving</a></li>
+   <!-- <li><a href="about.html">Donor wall</a></li> -->
+  <li><a href="Home.html#contact">Contact Us</a></li>
+  <li><a href="https://uj.devman.co.za/devman/online/giving/" style="color: #f26522;">DONATE</a></li>
+</ul>
+</nav>
+</div>
+</header>
+   
+<section class="choir-hero">
+  <div class="hero-content">
+    <!-- <h1>Design differently. Redesign inclusively.</h1>
+    <a href="https://uj.devman.co.za/devman/GSA/Fund/" class="btn-primary">Support Graduate School of Architects</a> -->
+  </div>
+</section>
+
+<div class="section-container">
+
+    <div class="section-title">
+        GSA10: Transformative Futures
+    </div>
+
+    <div class="grid">
+
+        <!-- LEFT -->
+        <div class="left">
+
+            <!-- MAIN IMAGE -->
+            <img src="pictures/GSA_2026_10_CELEBRATION SOCIAL_BANNER copy.png" alt="GSA Graphic" class="main-image">
+
+            <p>
+                Over the past decade, the GSA has expanded access to students historically excluded by race, gender, and income, while rethinking what architecture is and who it serves.
+            </p>
+
+            <p>
+                Here, architecture is understood as a living practice - shaped by place, community, and the realities of African cities.
+            </p>
+
+            <!-- CIRCLE IMAGE (REPLACED) -->
+            <img src="pictures/GSA_10_LOGO_2026_INSTAGRAM.png" alt="GSA Circle" class="circle-image">
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+
+            <div class="intro">
+                The Graduate School of Architecture at the University of Johannesburg was founded not just to teach architecture, but to transform it.
+            </div>
+
+            <a href="https://uj.devman.co.za/devman/GSA/Fund/" class="button">Donate Any Amount</a>
+
+            <p>
+                <span class="bold">Transformative Futures</span> is our commitment to the next decade: building an architectural future that is innovative, inclusive, and grounded in transformation.
+            </p>
+
+            <p>
+                Your support helps expand opportunities for students, strengthens the tools and spaces needed for learning and research, and brings new voices, ideas, and collaborations into the school.
+            </p>
+
+            <p>
+                Architecture shapes how we live, gather, and belong. It influences whose histories are preserved and whose futures are imagined.
+            </p>
+
+            <p class="bold">
+                This future is being built now. Join us in making Transformative Futures possible.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2025 Development and Fundraising. All Rights Reserved
+  </div>
+
+ <script src="Home.js"></script>   
+</body>
+
+</html>
