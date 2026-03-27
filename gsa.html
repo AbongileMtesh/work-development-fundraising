@@ -13,89 +13,115 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #fff;
-    }
-    
+
+    /* SECTION WIDTH (narrower overall content) */
     .section-container {
-        max-width: 1100px;
-        margin: 40px auto;
-        padding: 20px;
+        max-width: 1000px; /* 👈 reduced from 1200 */
+        margin: 0 auto;
+        padding: 40px 20px;
     }
     
-    /* Title */
+    /* TITLE */
     .section-title {
         text-align: center;
         font-size: 28px;
-        font-weight: bold;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+    
+    /* GRID */
+    .grid {
+        display: grid;
+    grid-template-columns: 0.6fr 0.6fr; /* 👈 slightly narrower columns */
+    justify-content: center; /* 👈 centers the columns */
+    gap: 40px;/* 👈 more space between columns like your design */
+    }
+    
+    /* LEFT COLUMN FIX */
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* keeps everything left aligned */
+}
+
+/* FORCE SAME WIDTH FOR IMAGE + TEXT */
+.left .main-image,
+.left p {
+    width: 100%;
+    max-width: 420px; /* 👈 SAME VALUE = perfect alignment */
+}
+
+/* OPTIONAL: keep spacing clean */
+.left p {
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+    /* PARAGRAPHS */
+    .right {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Ensure everything inside follows same width */
+.right > * {
+    width: 100%;
+}
+    .right p {
+        width: 100%;
+    max-width: 420px;
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 22px;
+   
+
+
+    }
+    
+    /* REMOVE <br> spacing */
+    .right br {
+        display: none;
+    }
+    
+    /* INTRO TEXT */
+    .intro {
+        font-size: 22px;
+        font-style: italic;
+        line-height: 1.6;
         margin-bottom: 30px;
     }
     
-    /* Layout */
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-    
-    /* LEFT SIDE */
-    .left img.main-image {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
-    
-    .left p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #333;
-    }
-    
-    /* Circle image (NOW AN IMAGE) */
-    .circle-image {
-        width: 180px;
-    height: 180px;
-    object-fit: cover; /* keeps it clean if proportions differ */
-    margin: 30px auto 0 auto;
-    display: block;
-    }
-    
-    /* RIGHT SIDE */
-    .right .intro {
-        font-style: italic;
-        font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-    
+    /* BUTTON (CENTERED) */
     .button {
-        display: inline-block;
+        display: block;              /* 👈 key for centering */
+        width: fit-content;
+        margin: 0 auto 30px auto;    /* 👈 centers horizontally */
         background: #ffff33;
-        padding: 12px 20px;
-        font-weight: bold;
+        color: #000;
+        padding: 12px 22px;
         text-decoration: none;
-        color: black;
-        margin: 15px 0;
+        font-weight: 500;
+        text-align: center;
     }
     
-    .right p {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #333;
+    /* MAIN IMAGE */
+    .main-image {
+        width: 100%;
+        max-width: 420px;
+        margin-bottom: 25px;
     }
     
+    /* CIRCLE IMAGE (CENTERED) */
+    .circle-image {
+        display: block;              /* 👈 required */
+        margin: 40px auto 0 auto;    /* 👈 centers */
+        width: 180px;
+    }
+    
+    /* BOLD TEXT */
     .bold {
-        font-weight: bold;
+        font-weight: 700;
     }
     
-    /* Responsive */
-    @media (max-width: 768px) {
-        .grid {
-            grid-template-columns: 1fr;
-        }
-    }
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
